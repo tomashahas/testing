@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BattleShip Game</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    
+    <section class="welcome">
+        <h1 class="welcome__title">BattleShip Game</h1>
+
+        <div class="welcome__btnBx">
+            <button class="welcome__btn welcomeOnline">Online 1v1</button>
+            <button class="welcome__btn welcomeBot">1vComputer</button>
+        </div>
+    </section>
+
+
+    <section class="name">
+        <h1 class="name__title">Enter your name</h1>
+        
+        <div class="name__bx">
+            <input type="text" class="name__input" placeholder="Name">
+            <div class="name__type">
+                <button class="type__btn typeCreate">Create Room</button>
+                <button class="type__btn typeJoin">Join Room</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="room">
+        <h1 class="room__title">Enter your Room ID</h1>
+
+        <div class="room__bx">
+            <input type="number" class="room__input" placeholder="Room ID">
+            <button class="room__btn">Join Room</button>
+        </div>
+    </section>
+
+    <section class="join">
+        <h1 class="join__title">Waiting for player</h1>
+        <h2 class="join__roomText">
+            Room ID:
+            <span class="join__roomId">20506994</span>
+        </h2>
+
+        <div class="join__info">
+            <div class="info__bx infoBxCreator">
+                <p class="info__name">ttoomas</p>
+                <p class="info__status">Joined</p>
+            </div>
+            <div class="info__bx infoBxJoiner">
+                <p class="info__name">Waiting</p>
+                <p class="info__status">Joined</p>
+                <div class="info__waitDots">
+                    <span class="info__dot"></span>
+                    <span class="info__dot"></span>
+                    <span class="info__dot"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="join__btnBx">
+            <div class="join__subtitle">Waiting for the creator to Start the game</div>
+            <button class="join__btn">Continue</button>
+        </div>
+    </section>
+
+
+    <section class="wait">
+        <h1 class="wait__title">
+            Waiting for <span class="wait__playerName">PlayerName</span> to choose ship positions
+        </h1>
+
+        <div class="wait__info">
+            <div class="info__bx infoBxCreator">
+                <p class="info__name">ttoomas</p>
+                <p class="info__status">Ready</p>
+            </div>
+            <div class="info__bx infoBxJoiner">
+                <p class="info__wait">Waiting</p>
+                <p class="info__name">Player</p>
+                <p class="info__status">Ready</p>
+                <div class="info__waitDots">
+                    <span class="info__dot"></span>
+                    <span class="info__dot"></span>
+                    <span class="info__dot"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="wait__btnBx">
+            <button class="wait__startBtn">Start the Game</button>
+        </div>
+    </section>
+
+
+    <section class="create">
+        <div class="create__shipsContainer">
+            <div class="create__ships">
+                <div class="create__shipContainer" style="--create-size-count: 4;">
+                    <div class="create__shipBx">
+                        <div class="create__shipImgBx">
+                            <img src="/img/battleship.png" alt="" aria-hidden="true" draggable="false" class="create__shipImg">
+                        </div>
+                        <div class="create__size">
+                            <span class="size__bx"></span>
+                            <span class="size__bx"></span>
+                            <span class="size__bx"></span>
+                            <span class="size__bx"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="create__shipContainer" style="--create-size-count: 3;">
+                    <div class="create__shipBx">
+                        <div class="create__shipImgBx">
+                            <img src="/img/carrier.png" alt="" aria-hidden="true" draggable="false" class="create__shipImg">
+                        </div>
+                        <div class="create__size">
+                            <span class="size__bx"></span>
+                            <span class="size__bx"></span>
+                            <span class="size__bx"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="create__shipContainer" style="--create-size-count: 2">
+                    <div class="create__shipBx">
+                        <div class="create__shipImgBx">
+                            <img src="/img/cruiser.png" alt="" aria-hidden="true" draggable="false" class="create__shipImg">
+                        </div>
+                        <div class="create__size">
+                            <span class="size__bx"></span>
+                            <span class="size__bx"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="create__shipContainer" style="--create-size-count: 3">
+                    <div class="create__shipBx">
+                        <div class="create__shipImgBx">
+                            <img src="/img/destroyer.png" alt="" aria-hidden="true" draggable="false" class="create__shipImg">
+                        </div>
+                        <div class="create__size">
+                            <span class="size__bx"></span>
+                            <span class="size__bx"></span>
+                            <span class="size__bx"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="create__shipContainer" style="--create-size-count: 4">
+                    <div class="create__shipBx">
+                        <div class="create__shipImgBx">
+                            <img src="/img/rescueship.png" alt="" aria-hidden="true" draggable="false" class="create__shipImg">
+                        </div>
+                        <div class="create__size">
+                            <span class="size__bx"></span>
+                            <span class="size__bx"></span>
+                            <span class="size__bx"></span>
+                            <span class="size__bx"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="create__shipContainer" style="--create-size-count: 5">
+                    <div class="create__shipBx">
+                        <div class="create__shipImgBx">
+                            <img src="/img/submarine.png" alt="" aria-hidden="true" draggable="false" class="create__shipImg">
+                        </div>
+                        <div class="create__size">
+                            <span class="size__bx"></span>
+                            <span class="size__bx"></span>
+                            <span class="size__bx"></span>
+                            <span class="size__bx"></span>
+                            <span class="size__bx"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="create__fieldsContainer">
+            <div class="create__fieldArea">
+                <div class="create__fieldBx">
+                    
+                </div>
+
+                <div class="create__fieldBtns">
+                    <button class="create__fieldBtn fieldRotate">Rotate</button>
+                    <button class="create__fieldBtn fieldRandom">Random</button>
+                    <button class="create__fieldBtn fieldClear">Clear</button>
+                </div>
+            </div>
+
+            <div class="create__fieldContinue">
+                <button class="create__fieldBtn fieldContinue createBot fade-out fade-fix">Continue!</button>
+                <button class="create__fieldBtn fieldContinue createOnline fade-out fade-fix">Continue!</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="game">
+        <div class="game__player">
+            <div class="player__field">
+
+            </div>
+            <div class="player__ships">
+                <div class="playerShip__container" style="--game-ship-size: 4;">
+                    <video autoplay loop muted class="playerShip__video">
+                        <source src="/img/animated/battleship-fire.mp4" type="video/mp4">
+                    </video>
+                    <div class="playerShip__bx">
+                        <span class="playerShip__cover" style="--player-ship-cover: 0"></span>
+                        <span class="playerShip__cover" style="--player-ship-cover: 1"></span>
+                        <span class="playerShip__cover" style="--player-ship-cover: 2"></span>
+                        <span class="playerShip__cover" style="--player-ship-cover: 3"></span>
+                    </div>
+                </div>
+                <div class="playerShip__container" style="--game-ship-size: 3;">
+                    <video autoplay loop muted class="playerShip__video">
+                        <source src="/img/animated/carrier-fire.mp4" type="video/mp4">
+                    </video>
+                    <div class="playerShip__bx">
+                        <span class="playerShip__cover" style="--player-ship-cover: 0"></span>
+                        <span class="playerShip__cover" style="--player-ship-cover: 1"></span>
+                        <span class="playerShip__cover" style="--player-ship-cover: 2"></span>
+                    </div>
+                </div>
+                <div class="playerShip__container" style="--game-ship-size: 2;">
+                    <video autoplay loop muted class="playerShip__video">
+                        <source src="/img/animated/cruiser-fire.mp4" type="video/mp4">
+                    </video>
+                    <div class="playerShip__bx">
+                        <span class="playerShip__cover" style="--player-ship-cover: 0"></span>
+                        <span class="playerShip__cover" style="--player-ship-cover: 1"></span>
+                    </div>
+                </div>
+                <div class="playerShip__container" style="--game-ship-size: 3;">
+                    <video autoplay loop muted class="playerShip__video">
+                        <source src="/img/animated/destroyer-fire.mp4" type="video/mp4">
+                    </video>
+                    <div class="playerShip__bx">
+                        <span class="playerShip__cover" style="--player-ship-cover: 0"></span>
+                        <span class="playerShip__cover" style="--player-ship-cover: 1"></span>
+                        <span class="playerShip__cover" style="--player-ship-cover: 2"></span>
+                    </div>
+                </div>
+                <div class="playerShip__container" style="--game-ship-size: 4;">
+                    <video autoplay loop muted class="playerShip__video">
+                        <source src="/img/animated/rescueship-fire.mp4" type="video/mp4">
+                    </video>
+                    <div class="playerShip__bx">
+                        <span class="playerShip__cover" style="--player-ship-cover: 0"></span>
+                        <span class="playerShip__cover" style="--player-ship-cover: 1"></span>
+                        <span class="playerShip__cover" style="--player-ship-cover: 2"></span>
+                        <span class="playerShip__cover" style="--player-ship-cover: 3"></span>
+                    </div>
+                </div>
+                <div class="playerShip__container" style="--game-ship-size: 5;">
+                    <video autoplay loop muted class="playerShip__video">
+                        <source src="/img/animated/submarine-fire.mp4" type="video/mp4">
+                    </video>
+                    <div class="playerShip__bx">
+                        <span class="playerShip__cover" style="--player-ship-cover: 0"></span>
+                        <span class="playerShip__cover" style="--player-ship-cover: 1"></span>
+                        <span class="playerShip__cover" style="--player-ship-cover: 2"></span>
+                        <span class="playerShip__cover" style="--player-ship-cover: 3"></span>
+                        <span class="playerShip__cover" style="--player-ship-cover: 4"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="game__bot">
+            <div class="bot__field">
+
+            </div>
+            <div class="bot__ships">
+                <div class="botShip__container" style="--game-ship-size: 4;">
+                    <video autoplay loop muted class="botShip__video">
+                        <source src="/img/animated/battleship-fire.mp4" type="video/mp4">
+                    </video>
+                    <div class="botShip__bx">
+                        <span class="botShip__cover"></span>
+                        <span class="botShip__cover"></span>
+                        <span class="botShip__cover"></span>
+                        <span class="botShip__cover"></span>
+                    </div>
+                </div>
+                <div class="botShip__container" style="--game-ship-size: 3;">
+                    <video autoplay loop muted class="botShip__video">
+                        <source src="/img/animated/carrier-fire.mp4" type="video/mp4">
+                    </video>
+                    <div class="botShip__bx">
+                        <span class="botShip__cover"></span>
+                        <span class="botShip__cover"></span>
+                        <span class="botShip__cover"></span>
+                    </div>
+                </div>
+                <div class="botShip__container" style="--game-ship-size: 2;">
+                    <video autoplay loop muted class="botShip__video">
+                        <source src="/img/animated/cruiser-fire.mp4" type="video/mp4">
+                    </video>
+                    <div class="botShip__bx">
+                        <span class="botShip__cover"></span>
+                        <span class="botShip__cover"></span>
+                    </div>
+                </div>
+                <div class="botShip__container" style="--game-ship-size: 3;">
+                    <video autoplay loop muted class="botShip__video">
+                        <source src="/img/animated/destroyer-fire.mp4" type="video/mp4">
+                    </video>
+                    <div class="botShip__bx">
+                        <span class="botShip__cover"></span>
+                        <span class="botShip__cover"></span>
+                        <span class="botShip__cover"></span>
+                    </div>
+                </div>
+                <div class="botShip__container" style="--game-ship-size: 4;">
+                    <video autoplay loop muted class="botShip__video">
+                        <source src="/img/animated/rescueship-fire.mp4" type="video/mp4">
+                    </video>
+                    <div class="botShip__bx">
+                        <span class="botShip__cover"></span>
+                        <span class="botShip__cover"></span>
+                        <span class="botShip__cover"></span>
+                        <span class="botShip__cover"></span>
+                    </div>
+                </div>
+                <div class="botShip__container" style="--game-ship-size: 5;">
+                    <video autoplay loop muted class="botShip__video">
+                        <source src="/img/animated/submarine-fire.mp4" type="video/mp4">
+                    </video>
+                    <div class="botShip__bx">
+                        <span class="botShip__cover"></span>
+                        <span class="botShip__cover"></span>
+                        <span class="botShip__cover"></span>
+                        <span class="botShip__cover"></span>
+                        <span class="botShip__cover"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="loader">
+        <span class="loader__circle"></span>
+    </section>
+
+
+    <section class="refresh">
+        <h1 class="refresh__title">Please refresh the browser</h1>
+        <button class="refresh__btn">Refresh</button>
+    </section>
+
+
+    <section class="win">
+        <h1 class="win__title">congratulations, you won!</h1>
+
+        <div class="win__btnBx">
+            <button class="win__btn">Play Again</button>
+        </div>
+    </section>
+    
+
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="/js/main.js" type="module"></script>
+    <script src="/js/create.js" type="module"></script>
+    <script src="/js/prepareGame.js" type="module"></script>
+    <script src="/js/botGame.js" type="module"></script>
+</body>
+</html>
